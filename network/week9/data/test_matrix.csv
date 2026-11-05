@@ -1,0 +1,15 @@
+﻿ID,Source,Destination,Procedure,Expected,Observed,Evidence,Status
+T01,PC1 (10.10.0.12),PC0 (10.10.0.11),ping 10.10.0.11,"Replies, 0% loss","4/4 replies, TTL 128, 0% loss",Fig. 10,Passed
+T02,PC3 (10.10.4.12),PC0 (10.10.0.11),ping 10.10.0.11,"Replies, 0% loss","First run 2/4 (50% loss: first two echoes timed out); every later run 4/4, TTL 126","Fig. 9, 13",Passed (see P-01)
+T03,PC1,PC3 (10.10.4.12),ping 10.10.4.12,"Replies, 0% loss","4/4 replies, TTL 126, 0% loss",Fig. 10,Passed
+T04,PC1,R-B-GYE Gi0/0 (10.10.4.1),ping 10.10.4.1,"Replies, 0% loss","4/4 replies, TTL 254, 0% loss",Fig. 10,Passed
+T05,PC3,PC0,tracert 10.10.0.11,"Path R-B, R-A, destination","Hops 10.10.4.1, 192.168.100.10, 10.10.0.11",Fig. 9,Passed
+T06,PC0–PC3,DHCP servers,"IP Configuration, DHCP","Address in pool, correct mask and gateway","10.10.0.11, 10.10.0.12 (/24, gw .1); 10.10.4.11, 10.10.4.12 (/25, gw .1)",Fig. 6,Passed
+T07,"R-A-HQ, R-B-GYE",Local,show ip interface brief,"Gi0/0, Gi0/1, Lo0 up/up",All three up/up on both routers; Gi0/2 administratively down,"Fig. 7, 8",Passed
+T08,"R-A-HQ, R-B-GYE",Local,show ip route,Connected and two static routes,"C, L, and two S routes on each router","Fig. 7, 8",Passed
+T09,"R-A-HQ, R-B-GYE",Local,show ip dhcp binding,Two bindings per router,10.10.0.11/.12 and 10.10.4.11/.12 with the PC MAC addresses,"Fig. 7, 8",Passed
+T10,"SW-A1, SW-B1",Local,show interfaces status,Fa0/1–3 connected,"Fa0/1–3 connected, VLAN 1, 100 Mbps full duplex","Fig. 3, 4",Passed
+T11,"SW-A1, SW-B1, SW-AP",Local,show mac address-table,Learned MACs on the used ports,SW-A1: 3 entries; SW-B1: 2 entries (PC2 aged out); SW-AP: 2 entries,Fig. 3–5,Passed
+T12,Console,"SW-A1, SW-B1, SW-AP, R-A-HQ, R-B-GYE",Log in with a wrong and then the correct password; enable,Wrong password rejected; correct one reaches privileged mode,"All five reached privileged mode. A wrong password was rejected (% Login invalid) on SW-A1, SW-B1, SW-AP, and R-A-HQ; the rejected attempt on R-B-GYE is the SSH test T14",Fig. 11,Passed (see P-04)
+T13,PC0,R-A-HQ (10.10.0.1),ssh -l admin 10.10.0.1,Wrong password rejected; correct one opens R-A-HQ>,Correct password opened R-A-HQ>; a second attempt with a wrong password was rejected (% Login invalid),Fig. 12,Passed
+T14,PC3,R-B-GYE (10.10.4.1),ssh -l admin 10.10.4.1,Wrong password rejected; correct one opens R-B-GYE>,"Rejected with % Login invalid, then accepted",Fig. 12,Passed

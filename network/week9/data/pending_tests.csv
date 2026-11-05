@@ -1,0 +1,11 @@
+﻿ID,Test,Reason it is pending,Planned week
+P01,"VLAN isolation between users, guests, servers, and administration",VLANs not implemented,10
+P02,802.1Q trunk and Router-on-a-Stick (inter-VLAN routing),Depends on P01,10
+P03,DHCP for guest networks (VLAN 30) and exclusion checks,VLAN 30 not implemented,10
+P04,EtherChannel Po1 failover (LACP) and RSTP root election,Second switch per site not built,10–11
+P05,SSH login to the switches (the router SSH test is T13 and T14); VTY access list,Switches have no management IP until VLAN 99,10
+P06,OSPF adjacency and route exchange between the sites,Replaces the static routes,11
+P07,"NAT and firewall behavior per site, Internet access",No Internet segment in the prototype,11
+P08,Reverse trace (PC0 to PC3) and static-route failure behavior,Not executed in this session,10
+P09,OpenWrt router functions on Raspberry Pi hardware,Hardware not yet available,11
+P10,"Replace the current secrets with stronger, unique ones and re-run T12 to T14",Team action,10
