@@ -31,6 +31,20 @@ Lista de tareas del proyecto, organizada con las columnas **Por hacer · En prog
 | 7 | Publicar el enlace del video de la Fase 1 en el README | Por hacer |
 | 8 | Subir el PDF a Canvas con el enlace del repositorio | Por hacer |
 
+## Fase 3
+
+| # | Tarea | Estado |
+| --- | --- | --- |
+| 1 | Diseñar la arquitectura cliente-servidor y el diagrama de componentes | Hecho |
+| 2 | Actualizar el diagrama de clases y definir los paquetes de Go | Hecho |
+| 3 | Elaborar el diagrama de secuencia de la autenticación | Hecho |
+| 4 | Actualizar la matriz de trazabilidad y diseñar el plan de pruebas | Hecho |
+| 5 | Diseñar el prototipo de consola y los criterios de accesibilidad (RNF-05) | Hecho |
+| 6 | Renombrar el PDF de la Fase 2, subir LICENSE y quitar las cédulas de las portadas | Hecho |
+| 7 | Crear el tablero en GitHub Projects | Por hacer |
+| 8 | Publicar el enlace del video de la Fase 1 en el README | Por hacer |
+| 9 | Subir el PDF a Canvas con el enlace del repositorio | Por hacer |
+
 ## Siguientes actividades (referencia)
 
 | Tarea | Responsable | Semanas |
