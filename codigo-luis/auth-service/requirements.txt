@@ -1,0 +1,9 @@
+fastapi==0.115.12
+uvicorn==0.34.2
+PyJWT==2.10.1
+cryptography==44.0.2
+argon2-cffi==23.1.0
+python-dotenv==1.1.0
+# solo para las pruebas
+httpx==0.28.1
+pytest==8.3.5
