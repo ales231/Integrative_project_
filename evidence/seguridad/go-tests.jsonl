@@ -1,0 +1,29 @@
+{"Time":"2026-11-22T21:00:31.2842048-05:00","Action":"start","Package":"uide/security"}
+{"Time":"2026-11-22T21:00:31.6270027-05:00","Action":"run","Package":"uide/security","Test":"TestValidSession"}
+{"Time":"2026-11-22T21:00:31.6270027-05:00","Action":"output","Package":"uide/security","Test":"TestValidSession","Output":"=== RUN   TestValidSession\n","OutputType":"frame"}
+{"Time":"2026-11-22T21:00:31.6590763-05:00","Action":"output","Package":"uide/security","Test":"TestValidSession","Output":"--- PASS: TestValidSession (0.03s)\n","OutputType":"frame"}
+{"Time":"2026-11-22T21:00:31.6590763-05:00","Action":"pass","Package":"uide/security","Test":"TestValidSession","Elapsed":0.03}
+{"Time":"2026-11-22T21:00:31.6590763-05:00","Action":"run","Package":"uide/security","Test":"TestRevokedSession"}
+{"Time":"2026-11-22T21:00:31.6590763-05:00","Action":"output","Package":"uide/security","Test":"TestRevokedSession","Output":"=== RUN   TestRevokedSession\n","OutputType":"frame"}
+{"Time":"2026-11-22T21:00:31.6760095-05:00","Action":"output","Package":"uide/security","Test":"TestRevokedSession","Output":"--- PASS: TestRevokedSession (0.02s)\n","OutputType":"frame"}
+{"Time":"2026-11-22T21:00:31.6760095-05:00","Action":"pass","Package":"uide/security","Test":"TestRevokedSession","Elapsed":0.02}
+{"Time":"2026-11-22T21:00:31.6767841-05:00","Action":"run","Package":"uide/security","Test":"TestUnavailableFailsClosed"}
+{"Time":"2026-11-22T21:00:31.6767841-05:00","Action":"output","Package":"uide/security","Test":"TestUnavailableFailsClosed","Output":"=== RUN   TestUnavailableFailsClosed\n","OutputType":"frame"}
+{"Time":"2026-11-22T21:00:31.7014404-05:00","Action":"output","Package":"uide/security","Test":"TestUnavailableFailsClosed","Output":"--- PASS: TestUnavailableFailsClosed (0.02s)\n","OutputType":"frame"}
+{"Time":"2026-11-22T21:00:31.7014404-05:00","Action":"pass","Package":"uide/security","Test":"TestUnavailableFailsClosed","Elapsed":0.02}
+{"Time":"2026-11-22T21:00:31.7014404-05:00","Action":"run","Package":"uide/security","Test":"TestTamperedToken"}
+{"Time":"2026-11-22T21:00:31.7014404-05:00","Action":"output","Package":"uide/security","Test":"TestTamperedToken","Output":"=== RUN   TestTamperedToken\n","OutputType":"frame"}
+{"Time":"2026-11-22T21:00:31.7863866-05:00","Action":"output","Package":"uide/security","Test":"TestTamperedToken","Output":"--- PASS: TestTamperedToken (0.09s)\n","OutputType":"frame"}
+{"Time":"2026-11-22T21:00:31.7863866-05:00","Action":"pass","Package":"uide/security","Test":"TestTamperedToken","Elapsed":0.09}
+{"Time":"2026-11-22T21:00:31.7863866-05:00","Action":"run","Package":"uide/security","Test":"TestUntrustedCertificate"}
+{"Time":"2026-11-22T21:00:31.7863866-05:00","Action":"output","Package":"uide/security","Test":"TestUntrustedCertificate","Output":"=== RUN   TestUntrustedCertificate\n","OutputType":"frame"}
+{"Time":"2026-11-22T21:00:31.8173134-05:00","Action":"output","Package":"uide/security","Test":"TestUntrustedCertificate","Output":"2026/11/22 21:00:31 http: TLS handshake error from 127.0.0.1:53234: remote error: tls: bad certificate\n"}
+{"Time":"2026-11-22T21:00:31.8173134-05:00","Action":"output","Package":"uide/security","Test":"TestUntrustedCertificate","Output":"--- PASS: TestUntrustedCertificate (0.03s)\n","OutputType":"frame"}
+{"Time":"2026-11-22T21:00:31.8173134-05:00","Action":"pass","Package":"uide/security","Test":"TestUntrustedCertificate","Elapsed":0.03}
+{"Time":"2026-11-22T21:00:31.8173134-05:00","Action":"run","Package":"uide/security","Test":"TestRejectCleartextAndMalformed"}
+{"Time":"2026-11-22T21:00:31.8173134-05:00","Action":"output","Package":"uide/security","Test":"TestRejectCleartextAndMalformed","Output":"=== RUN   TestRejectCleartextAndMalformed\n","OutputType":"frame"}
+{"Time":"2026-11-22T21:00:31.8471649-05:00","Action":"output","Package":"uide/security","Test":"TestRejectCleartextAndMalformed","Output":"--- PASS: TestRejectCleartextAndMalformed (0.03s)\n","OutputType":"frame"}
+{"Time":"2026-11-22T21:00:31.8471649-05:00","Action":"pass","Package":"uide/security","Test":"TestRejectCleartextAndMalformed","Elapsed":0.03}
+{"Time":"2026-11-22T21:00:31.8471649-05:00","Action":"output","Package":"uide/security","Output":"PASS\n","OutputType":"frame"}
+{"Time":"2026-11-22T21:00:31.8511994-05:00","Action":"output","Package":"uide/security","Output":"ok  \tuide/security\t0.566s\n"}
+{"Time":"2026-11-22T21:00:31.8535198-05:00","Action":"pass","Package":"uide/security","Elapsed":0.569}

@@ -1,0 +1,221 @@
+{
+  "executed_at": "2026-11-23T01:59:54.490157+00:00",
+  "transport": "HTTPS real sobre loopback con verificación de certificado",
+  "database": "SQLite temporal - laboratorio, no PostgreSQL desplegado",
+  "total": 14,
+  "passed": 14,
+  "results": [
+    {
+      "id": "E-01",
+      "action": "Crear empleado como TI",
+      "expected": 201,
+      "obtained": 201,
+      "passed": true,
+      "evidence": {
+        "id": 2,
+        "username": "empleado.evidencia",
+        "role": "empleado",
+        "area": "ventas",
+        "active": true
+      },
+      "requirement": "RF-SEC-01",
+      "control": "C-01"
+    },
+    {
+      "id": "E-02",
+      "action": "Iniciar sesión con credenciales válidas",
+      "expected": 200,
+      "obtained": 200,
+      "passed": true,
+      "evidence": {
+        "token_issued": true,
+        "expires_in": 900
+      },
+      "requirement": "RF-SEC-01",
+      "control": "C-01"
+    },
+    {
+      "id": "E-03",
+      "action": "Rechazar contraseña incorrecta",
+      "expected": 401,
+      "obtained": 401,
+      "passed": true,
+      "evidence": {
+        "detail": "Credenciales no válidas"
+      },
+      "requirement": "RF-SEC-01",
+      "control": "C-01"
+    },
+    {
+      "id": "E-04",
+      "action": "Consultar perfil propio autenticado",
+      "expected": 200,
+      "obtained": 200,
+      "passed": true,
+      "evidence": {
+        "id": 2,
+        "username": "empleado.evidencia",
+        "role": "empleado",
+        "area": "ventas",
+        "active": true
+      },
+      "requirement": "RF-SEC-02",
+      "control": "C-02"
+    },
+    {
+      "id": "E-05",
+      "action": "Empleado intenta administrar usuarios",
+      "expected": 403,
+      "obtained": 403,
+      "passed": true,
+      "evidence": {
+        "detail": "Acceso denegado"
+      },
+      "requirement": "RF-SEC-02",
+      "control": "C-02"
+    },
+    {
+      "id": "E-06",
+      "action": "Consultar perfil sin autenticación",
+      "expected": 401,
+      "obtained": 401,
+      "passed": true,
+      "evidence": {
+        "detail": "Sesión no válida"
+      },
+      "requirement": "RF-SEC-01",
+      "control": "C-01"
+    },
+    {
+      "id": "E-07",
+      "action": "Inspeccionar almacenamiento de contraseñas",
+      "expected": true,
+      "obtained": true,
+      "passed": true,
+      "evidence": {
+        "algorithm": "Argon2id",
+        "format": "$argon2id$v=19$m=19456,t=2,p=1$[sal omitida]$[hash omitido]",
+        "distinct_salts": true,
+        "plaintext_found": false,
+        "storage": "security_users.password_hash"
+      },
+      "requirement": "RF-SEC-03",
+      "control": "C-03"
+    },
+    {
+      "id": "E-08",
+      "action": "Validación interna sin clave de servicio",
+      "expected": 403,
+      "obtained": 403,
+      "passed": true,
+      "evidence": {
+        "detail": "Acceso de servicio denegado"
+      },
+      "requirement": "RF-SEC-05",
+      "control": "C-05"
+    },
+    {
+      "id": "E-09",
+      "action": "Validar sesión con credencial de servicio",
+      "expected": 200,
+      "obtained": 200,
+      "passed": true,
+      "evidence": {
+        "active": true,
+        "id": 2,
+        "username": "empleado.evidencia",
+        "role": "empleado",
+        "area": "ventas"
+      },
+      "requirement": "RF-SEC-05",
+      "control": "C-05"
+    },
+    {
+      "id": "E-10",
+      "action": "Reutilizar token después de cerrar sesión",
+      "expected": 401,
+      "obtained": 401,
+      "passed": true,
+      "evidence": {
+        "detail": "Sesión no válida"
+      },
+      "requirement": "RF-SEC-05",
+      "control": "C-05"
+    },
+    {
+      "id": "E-11",
+      "action": "Consultar auditoría sin secretos",
+      "expected": true,
+      "obtained": true,
+      "passed": true,
+      "evidence": {
+        "event_count": 7,
+        "secrets_found": false,
+        "sample": [
+          {
+            "id": 7,
+            "at": 1795399194,
+            "actor": 2,
+            "action": "logout",
+            "resource": "session",
+            "result": "allowed"
+          },
+          {
+            "id": 6,
+            "at": 1795399194,
+            "actor": 1,
+            "action": "user_created",
+            "resource": "user:3",
+            "result": "allowed"
+          },
+          {
+            "id": 5,
+            "at": 1795399193,
+            "actor": 2,
+            "action": "access_denied",
+            "resource": "administration",
+            "result": "denied"
+          }
+        ]
+      },
+      "requirement": "RF-SEC-08",
+      "control": "C-08"
+    },
+    {
+      "id": "E-12",
+      "action": "Conectar sin confiar en el certificado del laboratorio",
+      "expected": true,
+      "obtained": true,
+      "passed": true,
+      "evidence": {
+        "certificate_validation": "rechazo de CA no confiable"
+      },
+      "requirement": "RF-SEC-04",
+      "control": "C-04"
+    },
+    {
+      "id": "E-13",
+      "action": "Desactivar cuenta y rechazar sesión existente",
+      "expected": 401,
+      "obtained": 401,
+      "passed": true,
+      "evidence": {
+        "detail": "Sesión no válida"
+      },
+      "requirement": "RF-SEC-05",
+      "control": "C-05"
+    },
+    {
+      "id": "E-14",
+      "action": "Rechazar JWT vencido",
+      "expected": 401,
+      "obtained": 401,
+      "passed": true,
+      "evidence": {
+        "detail": "Sesión no válida"
+      },
+      "requirement": "RF-SEC-05",
+      "control": "C-05"
+    }
+  ]
+}

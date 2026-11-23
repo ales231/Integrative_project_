@@ -5,4 +5,11 @@
 
 Entregas grupales del componente de Seguridad organizadas por Arthur Brayan Beltran Hernandez. Esta rama no modifica los avances de las otras asignaturas.
 
-La Fase 3 incorporara implementacion y evidencias reales de autenticacion, proteccion de contrasenas y control de acceso. Los documentos de diseno no acreditan implementacion ni pruebas ejecutadas.
+## Fase 3: aplicacion de controles
+
+- [Informe con resultados y firmas](fase3-aplicacion-controles-seguridad.pdf).
+- [Servicio FastAPI e instrucciones de ejecucion](../../auth-service/README.md).
+- [Adaptador de identidad para Go](../../security-go/README.md).
+- [Evidencias ejecutadas y sanitizadas](../../evidence/seguridad/README.md).
+
+Resultado del laboratorio: 21 pruebas del servicio, 6 del adaptador Go y 14 escenarios HTTPS correctos. El informe distingue los controles comprobados de lo pendiente de integrar: chat completo, membresias, WSS, PostgreSQL, VLAN, permisos SQL y respaldos. Las claves y bases de pruebas no se suben.
