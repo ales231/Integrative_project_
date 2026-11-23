@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-11-23T03:06:46.995981+00:00",
+  "python_tests": 25,
+  "python_failures": 0,
+  "original_fastapi_tests": 21,
+  "additional_contract_tests": 4,
+  "go_adapter_tests": 6,
+  "go_vet": "passed",
+  "https_scenarios_previous_evidence": 14,
+  "broken_markdown_links": 0,
+  "official_code_unchanged": [
+    "auth-service/app/cli.py",
+    "auth-service/app/main.py",
+    "auth-service/app/__init__.py",
+    "auth-service/tests/conftest.py",
+    "auth-service/tests/test_security.py",
+    "security-go/auth.go",
+    "security-go/auth_test.go",
+    "security-go/go.mod"
+  ],
+  "source_branches": {
+    "main": "3499a53b8968e5531340a57b27d292f13a757dd7",
+    "luis-novillo": "c0385b32a599eaf453db039cac3b98d5eeaa47a4",
+    "alex-alban": "4b9bdc82371c59b1b4c17443cbf8d5585a5aaa8a",
+    "beltranfuego": "99c4f2bfea9124c7c00c181e14191ad1fa1590b9"
+  },
+  "scope": "Documentación, contrato e integración de ramas. No acredita chat WSS ni despliegue entre sedes."
+}
