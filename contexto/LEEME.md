@@ -10,7 +10,7 @@ Estado al 22 de noviembre de 2026.
 |---|---|---|
 | `main` | Equipo | Entregas de POO (Fases 1, 2 y 3, con las correcciones de la Fase 3), diagramas editables y archivos de Redes de Alex (`network/`, `evidence/`) |
 | `beltranfuego` | Arthur | Fundamentos de Seguridad: Fases 1, 2 y 3, servicio `auth-service/` (FastAPI), adaptador `security-go/` y evidencias |
-| `luis-novillo` | Luis | Entregas de POO (Fases 1 a 3) y esta carpeta de contexto |
+| `luis-novillo` | Luis | Entregas de POO (Fases 1 a 3), esta carpeta de contexto y `codigo-luis/` (código de referencia) |
 
 La rama `avances` ya no existe: Arthur la reemplazó por `beltranfuego`. El commit `3764449` que Luis subió por error (una segunda implementación de autenticación dentro de `docs/poo/`) ya lo quitó Arthur en `99c4f2b`, así que no hay nada que revertir.
 
@@ -40,6 +40,14 @@ El enunciado todavía no está habilitado. Por el documento del proyecto (`PI_TE
 - comprobar membresía del canal, área y rol en cada operación;
 - volver a validar la sesión cada 30 segundos y cerrar las revocadas antes de 60;
 - limitar a 5 conexiones por cuenta, 30 mensajes por minuto y 4096 bytes por mensaje.
+
+### Código de referencia en `codigo-luis/`
+Código generado con Claude en paralelo al de Arthur, probado localmente (10 pruebas de FastAPI, 10 de Go y una demostración de 37 verificaciones). **No es la versión oficial de Seguridad.**
+- `codigo-luis/app-go/`: servidor de chat con canales, membresía, área, límites de mensajes y validación de sesión. Es la **base para la Fase 4 de POO**; se adaptará para usar `security-go` de Arthur.
+- `codigo-luis/auth-service/`: versión paralela del servicio de autenticación. **No se usa**: el oficial es el de Arthur en `beltranfuego`.
+- Instrucciones en `codigo-luis/LEEME.md`. No contiene claves, `.env` ni bases de datos.
+
+El mensaje que explica a Arthur lo que pasó y las diferencias está en `contexto/mensaje-arthur.md`.
 
 ## 3. Fundamentos de Seguridad (Arthur)
 

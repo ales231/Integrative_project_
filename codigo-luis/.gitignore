@@ -1,0 +1,10 @@
+.idea/
+.env
+*.db
+*.pem
+keys/
+__pycache__/
+.pytest_cache/
+venv/
+.venv/
+*.exe
