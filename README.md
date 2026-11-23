@@ -1,56 +1,122 @@
-# Chat empresarial entre Quito y Guayaquil — Grupo 10, UIDE
+> **Responsable: Equipo. Alcance de esta rama: Documentos generales del proyecto.**
+> Las correcciones entre entregas están en [ALINEACION-PROYECTO.md](ALINEACION-PROYECTO.md) y [su nota PDF](docs/alineacion-entregas.pdf). Cada materia conserva sus archivos y evidencias.
 
-Base común de POO, Fundamentos de Seguridad y Tecnologías de Comunicación en Red.
-`main`, `beltranfuego`, `luis-novillo` y `alex-alban` comparten esta revisión de integración.
-Los aportes y responsables se conservan; las ramas personales pueden continuar a partir de esta base.
+# Chat empresarial entre sedes – Proyecto Integrador UIDE
 
-**Estado real:** autenticación y adaptador de Seguridad probados en laboratorio; diseño de POO
-con correcciones; prototipo de red de semana 9. El chat WSS integrado, VLAN/ACL, permisos PostgreSQL
-y restauración de respaldos todavía requieren implementación y pruebas. No se acredita entrega en la plataforma.
+Plataforma de chat interno para una empresa con dos sedes: la **matriz en Quito** (~100 empleados) y la **sucursal en Guayaquil** (~35 empleados). Un **servidor central en Go** recibe, guarda y reenvía los mensajes por WebSocket; los empleados se conectan desde un cliente de consola en Go después de iniciar sesión con un token emitido por un servicio FastAPI.
 
-## Referencia común
+> **Grupo 10** · **Fase actual:** Fase 3 – Diseño de la solución.
 
-- [Contrato exacto de API, identidad, sesiones y despliegue](docs/integracion/CONTRATO.md).
-- [Resolución de discrepancias y cambios de pruebas](docs/integracion/RESOLUCIONES.md).
-- [Contrato legible por herramientas](docs/integracion/contrato.json).
-- [Adenda de alineación y diagramas vigentes](docs/integracion/alineacion-proyecto.pdf).
-- [Estado y pendientes por responsable](docs/tablero-tareas.md).
+## Fase 3
 
-Identidad: `username` como `ana.perez`, sin `@`; clave estable `id`; roles `empleado`, `supervisor`, `ti`.
-Login: HTTPS `/login` con `username` y `password`; JWT RS256 de 15 minutos.
-Go usa `security-go.Validate` y `/sessions/validate` con Bearer y clave de servicio.
-FastAPI administra cuentas y roles; Go administra salas, mensajes y perfiles vinculados al ID.
+Documento de la entrega: [Fase3_POO_Grupo10.pdf](docs/Fase3_POO_Grupo10.pdf)
 
-## Entregables y componentes
+Incluye arquitectura cliente-servidor, diagrama de componentes, diagrama de clases actualizado, paquetes de Go, secuencia de la autenticación, matriz de trazabilidad, plan de pruebas, prototipo de la interfaz de consola con criterios de accesibilidad, cambios respecto a la Fase 2 y declaración de uso de IA.
 
-| Área | Responsable | Archivos |
-|---|---|---|
-| POO | Luis; cliente con Arthur | [Fase 1](docs/01-contexto-y-seleccion.pdf), [Fase 2](docs/Fase2_POO_Grupo10.pdf), [Fase 3 con adenda](docs/Fase3_POO_Grupo10.pdf), [diagramas vigentes](docs/diagramas/README.md) |
-| Seguridad | Arthur | [Fases 1–3](docs/seguridad/README.md), [FastAPI](auth-service/README.md), [adaptador Go](security-go/README.md), [evidencias](evidence/seguridad/README.md) |
-| Redes | Alex | [Plan de red](docs/Phase1_Network_Planning_Report_Enterprise_Chat.pdf), [semana 9](docs/Week9_Prototype_Report.pdf), [configuraciones y datos](network/week9/), [capturas](evidence/week9/) |
+Archivos editables de los diagramas (draw.io):
 
-Los informes previos se conservan como antecedentes; los PDF actuales de POO y Redes incluyen
-la adenda que explica los valores corregidos. Originales sin alterar en `docs/historico/`.
-El código paralelo de Luis se conserva como referencia histórica comprimida, no es una segunda API activa.
+| Diagrama | Archivo |
+| --- | --- |
+| Arquitectura cliente-servidor | [fase3-arquitectura.drawio](docs/diagramas/fase3-arquitectura.drawio) |
+| Componentes | [fase3-componentes.drawio](docs/diagramas/fase3-componentes.drawio) |
+| Clases | [fase3-clases.drawio](docs/diagramas/fase3-clases.drawio) |
+| Secuencia de la autenticación | [fase3-secuencia-autenticacion.drawio](docs/diagramas/fase3-secuencia-autenticacion.drawio) |
 
-## Arquitectura objetivo
+El diagrama de clases también está como imagen en [PNG](docs/diagramas/diagrama-clases-uml.png) y [PDF](docs/diagramas/diagrama-clases-uml.pdf). Los `.drawio` se abren en [app.diagrams.net](https://app.diagrams.net) con *Archivo › Abrir desde › Dispositivo*.
 
-Cliente Go → WSS tcp/443 → servidor de chat Go → PostgreSQL con TLS tcp/5432.
-Cliente Go → HTTPS tcp/8000 → FastAPI para login, perfil y administración de TI.
-Servidor Go → HTTPS tcp/8000 → FastAPI mediante `security-go` para comprobar identidad y revocación.
-Servicios en Quito; usuarios en Quito y Guayaquil. Certificados y reglas de red del despliegue pendientes.
-El laboratorio de Seguridad usa loopback, certificado local y SQLite temporal; no prueba la WAN.
+## Fase 2
 
-## Comprobaciones reproducibles
+Documento de la entrega: [Fase2_POO_Grupo10.pdf](docs/Fase2_POO_Grupo10.pdf)
 
-Desde `auth-service/`, con las dependencias documentadas: `python -m pytest -q`.
-Desde `security-go/`: `go test -count=1 ./...` y `go vet ./...`.
-Contrato adicional: `python -m pytest -q ../tests/integracion` desde `auth-service/`.
-Resultados de revisión en `evidence/integracion/`; no confundirlos con la implementación del chat.
+## Video de presentación
 
-## Equipo y pendientes externos
+El video de la Fase 1 todavía no tiene un enlace publicado; se agregará en este apartado.
 
-Luis Angel Novillo Cruz: diseño y servidor Go. Arthur Brayan Beltran Hernández: Seguridad y cliente.
-Alex Fernando Alban Torres: redes, repositorio y persistencia/métricas.
-Video y GitHub Projects siguen pendientes de enlace verificable. No hay URL de entrega o aprobación docente confirmada.
-Licencia MIT: [LICENSE](LICENSE). Las declaraciones históricas se conservan en los documentos originales.
+## Equipo y roles
+
+| Integrante | Rol | Responsabilidades principales |
+| --- | --- | --- |
+| Luis Angel Novillo Cruz | Líder del proyecto y del servidor Go | Coordinación, diagramas UML, servidor de chat |
+| Arthur Brayan Beltran Hernández | Cliente y seguridad | Cliente de chat, inicio de sesión con token, contrato de comunicación |
+| Alex Fernando Alban Torres | Repositorio, datos y pruebas | Repositorio y tablero, base de datos, métricas para Estadística, pruebas |
+
+## Problema que resuelve
+
+Hoy las sedes se comunican por llamadas, correo personal y grupos de WhatsApp: la información queda dispersa, las respuestas entre sedes tardan y la empresa no controla sus datos. El chat empresarial centraliza la comunicación en canales por área y mensajes directos, con historial guardado y acceso solo para usuarios autenticados.
+
+## Arquitectura (resumen)
+
+```
+[Cliente Go] ── WSS, tcp/443, JSON ──► [Servidor Go] ── SQL ──► [PostgreSQL]
+     │                                       │
+     └── HTTPS: POST /login ──► [FastAPI] ◄──┘ HTTPS: POST /validar
+```
+
+El servidor Go, PostgreSQL y FastAPI se ubican en la matriz de Quito. La aplicación Go no guarda contraseñas.
+
+## Estructura prevista del código
+
+```
+app-go/
+├── cmd/
+│   ├── cliente/      # main del cliente de consola
+│   └── servidor/     # main del servidor de chat
+└── internal/
+    ├── cliente/      # Consola, ClienteChat
+    ├── protocolo/    # Mensaje, Peticion, Respuesta, ResumenUso
+    ├── servidor/     # ServidorChat, Conexion
+    ├── sesion/       # Autenticador, ClienteAuth, Sesion
+    ├── cuentas/      # GestorCuentas
+    ├── almacen/      # Repositorio, RepositorioPostgres
+    └── dominio/      # Usuario, Sala, Sede
+```
+
+El código se agregará en las siguientes fases.
+
+## Datos para Estadística
+
+Mensajes por hora y por sede, tiempo de respuesta entre sedes, latencia de entrega, longitud de los mensajes, usuarios conectados y duración de las sesiones. Se usarán datos simulados o de pruebas internas.
+
+## Documentación (carpeta `docs/`)
+
+### Programación Orientada a Objetos
+
+| Entregable | Archivo |
+| --- | --- |
+| Fase 1: contexto y selección del sistema, cronograma, integridad, licencia y uso de IA | [01-contexto-y-seleccion.pdf](docs/01-contexto-y-seleccion.pdf) |
+| Fase 1: matriz de actores, roles y responsabilidades | [matriz-actores-roles.pdf](docs/matriz-actores-roles.pdf) |
+| Fase 1: contrato de comunicación del equipo | [contrato-comunicacion.pdf](docs/contrato-comunicacion.pdf) |
+| Fase 2: definición de la aplicación | [Fase2_POO_Grupo10.pdf](docs/Fase2_POO_Grupo10.pdf) |
+| Fase 3: diseño de la solución | [Fase3_POO_Grupo10.pdf](docs/Fase3_POO_Grupo10.pdf) |
+| Fase 3: diagramas editables | [docs/diagramas/](docs/diagramas/) |
+| Fase 3: diagrama de clases | [PNG](docs/diagramas/diagrama-clases-uml.png) y [PDF](docs/diagramas/diagrama-clases-uml.pdf) |
+| Fases 1 a 3: tablero de tareas | [tablero-tareas.md](docs/tablero-tareas.md) |
+
+### Otras materias
+
+Estos archivos son de Tecnologías de Comunicación en Red y no forman parte de las entregas de POO.
+
+| Contenido | Ubicación |
+| --- | --- |
+| Planificación de la red (Fase 1) | [Phase1_Network_Planning_Report_Enterprise_Chat.pdf](docs/Phase1_Network_Planning_Report_Enterprise_Chat.pdf) |
+| Prototipo de la semana 9 | [Week9_Prototype_Report.pdf](docs/Week9_Prototype_Report.pdf), [network/week9/](network/week9/) y [evidence/week9/](evidence/week9/) |
+
+## Tablero de tareas
+
+La lista de tareas y su estado están en [`docs/tablero-tareas.md`](docs/tablero-tareas.md). El tablero en GitHub Projects se creará a partir de esa lista.
+
+## Tecnologías
+
+- **Go** – servidor y cliente de chat (WebSocket, goroutines)
+- **FastAPI** – servicio de autenticación y emisión de tokens
+- **PostgreSQL** – usuarios, canales, mensajes y métricas
+- **draw.io** – diagramas UML editables
+- **Git y GitHub** – control de versiones
+
+## Licencia
+
+Licencia preliminar **MIT**. Ver [`LICENSE`](LICENSE).
+
+## Uso de herramientas de IA
+
+El equipo usó Claude (Anthropic) como apoyo en la documentación de cada fase. El detalle está en la declaración de uso de IA de cada documento: sección 6 del documento de contexto de la Fase 1, apartado 10 de la Fase 2 y apartado 11 de la Fase 3.
