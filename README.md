@@ -19,7 +19,7 @@ Archivos editables de los diagramas (draw.io):
 | Clases | [fase3-clases.drawio](docs/diagramas/fase3-clases.drawio) |
 | Secuencia de la autenticación | [fase3-secuencia-autenticacion.drawio](docs/diagramas/fase3-secuencia-autenticacion.drawio) |
 
-El diagrama de clases también está como imagen en [PNG](docs/diagrama-clases-uml.png) y [PDF](docs/diagrama-clases-uml.pdf). Los `.drawio` se abren en [app.diagrams.net](https://app.diagrams.net) con *Archivo › Abrir desde › Dispositivo*.
+El diagrama de clases también está como imagen en [PNG](docs/diagramas/diagrama-clases-uml.png) y [PDF](docs/diagramas/diagrama-clases-uml.pdf). Los `.drawio` se abren en [app.diagrams.net](https://app.diagrams.net) con *Archivo › Abrir desde › Dispositivo*.
 
 ## Fase 2
 
@@ -86,7 +86,7 @@ Mensajes por hora y por sede, tiempo de respuesta entre sedes, latencia de entre
 | Fase 2: definición de la aplicación | [Fase2_POO_Grupo10.pdf](docs/Fase2_POO_Grupo10.pdf) |
 | Fase 3: diseño de la solución | [Fase3_POO_Grupo10.pdf](docs/Fase3_POO_Grupo10.pdf) |
 | Fase 3: diagramas editables | [docs/diagramas/](docs/diagramas/) |
-| Fase 3: diagrama de clases | [PNG](docs/diagrama-clases-uml.png) y [PDF](docs/diagrama-clases-uml.pdf) |
+| Fase 3: diagrama de clases | [PNG](docs/diagramas/diagrama-clases-uml.png) y [PDF](docs/diagramas/diagrama-clases-uml.pdf) |
 | Fases 1 a 3: tablero de tareas | [tablero-tareas.md](docs/tablero-tareas.md) |
 
 ### Otras materias
