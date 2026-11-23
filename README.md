@@ -1,3 +1,5 @@
+> **Próximas entregas:** consultar la [guía de continuidad del proyecto](CONTINUIDAD-PROYECTO.md): responsables, criterios comunes, siguientes pasos y revisión antes de presentar.
+
 > **Responsable: Arthur. Alcance de esta rama: Seguridad.**
 > Las correcciones entre entregas están en [ALINEACION-PROYECTO.md](ALINEACION-PROYECTO.md) y [su nota PDF](docs/alineacion-entregas.pdf). Cada materia conserva sus archivos y evidencias.
 
