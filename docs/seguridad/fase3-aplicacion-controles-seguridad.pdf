@@ -904,7 +904,7 @@ endobj
 endobj
 25 0 obj
 <<
-/Length 61530
+/Length 61596
 >>
 stream
 q
@@ -918,28 +918,28 @@ BT 1 0 0 1 0 6 Tm /F3+0 12 Tf 18 TL (1. Alcance y entorno de aplicaci\001n) Tj T
 Q
 Q
 q
-1 0 0 1 66 617.3 cm
+1 0 0 1 66 600.8 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 71.5 Tm 36 0 Td -0.087337 Tw /F2+0 11 Tf 16.5 TL (Se implement\001 el componente de Seguridad del chat empresarial como un servicio independiente) Tj T* 0 Tw -36 0 Td .631527 Tw (en FastAPI y un adaptador de identidad para Go. Se conservan los riesgos R-01 a R-08 y los requisitos) Tj T* 0 Tw .527779 Tw (RF-SEC-01 a RF-SEC-10 de las fases previas. El servicio crea usuarios, autentica, rechaza credenciales) Tj T* 0 Tw 3.111689 Tw (inv\002lidas, protege contrase\003as, comprueba roles y revoca sesiones. El c\001digo y las evidencias se) Tj T* 0 Tw (comparten en main y en las ramas personales del equipo; beltranfuego identifica el aporte de Seguridad.) Tj T* ET
+BT 1 0 0 1 0 88 Tm 36 0 Td -0.087337 Tw /F2+0 11 Tf 16.5 TL (Se implement\001 el componente de Seguridad del chat empresarial como un servicio independiente) Tj T* 0 Tw -36 0 Td .631527 Tw (en FastAPI y un adaptador de identidad para Go. Se conservan los riesgos R-01 a R-08 y los requisitos) Tj T* 0 Tw .527779 Tw (RF-SEC-01 a RF-SEC-10 de las fases previas. El servicio crea usuarios, autentica, rechaza credenciales) Tj T* 0 Tw .511182 Tw (inv\002lidas, protege contrase\003as, comprueba roles y revoca sesiones. El c\001digo y las evidencias de Arthur) Tj T* 0 Tw .174889 Tw (se organizan en la rama beltranfuego. Luis desarrolla Go y Alex desarrolla Redes; cada entrega conserva) Tj T* 0 Tw (su alcance dentro del mismo proyecto.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 66 526.8 cm
+1 0 0 1 66 510.3 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 71.5 Tm 36 0 Td .076297 Tw /F2+0 11 Tf 16.5 TL (Las pruebas del informe se ejecutaron en este equipo con usuarios y secretos sint\004ticos: FastAPI,) Tj T* 0 Tw -36 0 Td 1.951402 Tw (base SQLite temporal y HTTPS real sobre loopback con verificaci\001n de certificado. El dise\003o final) Tj T* 0 Tw 1.210986 Tw (mantiene PostgreSQL, pero este despliegue y la integraci\001n con el chat entre sedes todav\005a no se han) Tj T* 0 Tw -0.031719 Tw (ejecutado. Los resultados del laboratorio no se presentan como evidencia de la red Quito-Guayaquil ni de) Tj T* 0 Tw (un chat Go ya integrado.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 66 473.8 cm
+1 0 0 1 66 457.3 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 35 Tm /F2+0 10 Tf 15 TL (Versi\001n comprobada: componente auth-service y adaptador security-go del commit) Tj T* (0e889a78202f2c169f3779009fef1742ed029e17. Las capturas y resultados de este informe corresponden a esos) Tj T* (componentes de Seguridad; no eval\006an implementaciones independientes de otras carpetas del repositorio.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 66 283.8 cm
+1 0 0 1 66 267.3 cm
 q
 0 0 0 rg
 BT /F1 10 Tf 12 TL ET
@@ -1055,17 +1055,17 @@ Q
 Q
 Q
 q
-1 0 0 1 66 273.8 cm
+1 0 0 1 66 257.3 cm
 Q
 q
-1 0 0 1 66 243.8 cm
+1 0 0 1 66 227.3 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 6 Tm /F3+0 12 Tf 18 TL (2. Controles implementados y alcance real) Tj T* ET
 Q
 Q
 q
-1 0 0 1 66 186.3 cm
+1 0 0 1 66 169.8 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 38.5 Tm 36 0 Td .665967 Tw /F2+0 11 Tf 16.5 TL (La tabla distingue lo implementado en el laboratorio de los controles parciales y los pendientes) Tj T* 0 Tw -36 0 Td .05682 Tw (de la Fase 2. Un resultado satisfactorio de un endpoint no acredita por s\005 solo restricciones de una VLAN) Tj T* 0 Tw (o permisos SQL de un despliegue PostgreSQL.) Tj T* ET
@@ -16440,52 +16440,52 @@ xref
 0000202330 00000 n 
 0000203099 00000 n 
 0000203369 00000 n 
-0000264953 00000 n 
-0000265061 00000 n 
-0000265169 00000 n 
-0000266286 00000 n 
-0000266548 00000 n 
-0000314342 00000 n 
-0000315116 00000 n 
-0000316260 00000 n 
-0000316529 00000 n 
-0000354192 00000 n 
-0000354969 00000 n 
-0000356115 00000 n 
-0000356393 00000 n 
-0000391632 00000 n 
-0000392395 00000 n 
-0000392665 00000 n 
-0000455933 00000 n 
-0000456203 00000 n 
-0000518329 00000 n 
-0000518599 00000 n 
-0000581233 00000 n 
-0000581503 00000 n 
-0000644558 00000 n 
-0000644828 00000 n 
-0000708328 00000 n 
-0000708598 00000 n 
-0000767807 00000 n 
-0000768141 00000 n 
-0000826706 00000 n 
-0000884622 00000 n 
-0000884956 00000 n 
-0000943047 00000 n 
-0001006949 00000 n 
-0001007283 00000 n 
-0001065368 00000 n 
-0001132577 00000 n 
-0001132911 00000 n 
-0001190927 00000 n 
-0001242079 00000 n 
-0001242413 00000 n 
-0001300559 00000 n 
-0001370526 00000 n 
-0001370958 00000 n 
-0001430291 00000 n 
-0001446826 00000 n 
-0001461648 00000 n 
+0000265019 00000 n 
+0000265127 00000 n 
+0000265235 00000 n 
+0000266352 00000 n 
+0000266614 00000 n 
+0000314408 00000 n 
+0000315182 00000 n 
+0000316326 00000 n 
+0000316595 00000 n 
+0000354258 00000 n 
+0000355035 00000 n 
+0000356181 00000 n 
+0000356459 00000 n 
+0000391698 00000 n 
+0000392461 00000 n 
+0000392731 00000 n 
+0000455999 00000 n 
+0000456269 00000 n 
+0000518395 00000 n 
+0000518665 00000 n 
+0000581299 00000 n 
+0000581569 00000 n 
+0000644624 00000 n 
+0000644894 00000 n 
+0000708394 00000 n 
+0000708664 00000 n 
+0000767873 00000 n 
+0000768207 00000 n 
+0000826772 00000 n 
+0000884688 00000 n 
+0000885022 00000 n 
+0000943113 00000 n 
+0001007015 00000 n 
+0001007349 00000 n 
+0001065434 00000 n 
+0001132643 00000 n 
+0001132977 00000 n 
+0001190993 00000 n 
+0001242145 00000 n 
+0001242479 00000 n 
+0001300625 00000 n 
+0001370592 00000 n 
+0001371024 00000 n 
+0001430357 00000 n 
+0001446892 00000 n 
+0001461714 00000 n 
 trailer
 <<
 /Size 72
@@ -16493,5 +16493,5 @@ trailer
 /Info 1 0 R
 >>
 startxref
-1473553
+1473619
 %%EOF

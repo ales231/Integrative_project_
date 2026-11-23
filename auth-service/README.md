@@ -34,14 +34,8 @@ Para el entorno final: quite `LABORATORY_MODE`, use una URL `postgresql+psycopg:
 
 ## Contrato de API
 
-Contrato compartido y resoluciones: [Integración](../docs/integracion/CONTRATO.md).
-`username` es un identificador de 3 a 64 caracteres `[a-z0-9._-]`, por ejemplo `ana.perez`, no un correo.
-Los roles son `empleado`, `supervisor` y `ti`. La respuesta de login es `access_token`, `token_type`, `expires_in` (900 segundos).
-El cliente de TI llama directamente a esta API para gestionar cuentas; el servidor de chat no recibe contraseñas.
-
 | Metodo / ruta | Acceso | Funcion |
 |---|---|---|
-| GET `/health` | Publico | Estado del servicio, sin secretos. |
 | POST `/login` | Publico limitado | JSON `username`, `password`; devuelve JWT en cuerpo. No imprimirlo ni guardarlo en URL o logs. |
 | GET `/me` | Bearer valido | Perfil propio sin hash. |
 | POST `/logout` | Bearer valido | Revoca la sesion actual. |
