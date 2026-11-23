@@ -1,6 +1,6 @@
 # Contexto del proyecto – rama de Luis Novillo
 
-Esta rama parte de `main` y solo agrega la carpeta `contexto/`. Resume en qué estado está cada parte del proyecto integrador (Grupo 10, chat empresarial) y qué le toca a cada uno. **No cambia ningún archivo de `main`.**
+Esta rama contiene **solo lo de Luis**: las entregas de POO (Fases 1 a 3, con las correcciones de la Fase 3) y esta carpeta `contexto/`, que resume en qué estado está cada parte del proyecto integrador (Grupo 10, chat empresarial) y qué le toca a cada uno. Los archivos de Redes (Alex) siguen en `main` y los de Seguridad (Arthur) en `beltranfuego`.
 
 Estado al 22 de noviembre de 2026.
 
@@ -10,7 +10,7 @@ Estado al 22 de noviembre de 2026.
 |---|---|---|
 | `main` | Equipo | Entregas de POO (Fases 1, 2 y 3, con las correcciones de la Fase 3), diagramas editables y archivos de Redes de Alex (`network/`, `evidence/`) |
 | `beltranfuego` | Arthur | Fundamentos de Seguridad: Fases 1, 2 y 3, servicio `auth-service/` (FastAPI), adaptador `security-go/` y evidencias |
-| `luis-novillo` | Luis | Esta carpeta de contexto |
+| `luis-novillo` | Luis | Entregas de POO (Fases 1 a 3) y esta carpeta de contexto |
 
 La rama `avances` ya no existe: Arthur la reemplazó por `beltranfuego`. El commit `3764449` que Luis subió por error (una segunda implementación de autenticación dentro de `docs/poo/`) ya lo quitó Arthur en `99c4f2b`, así que no hay nada que revertir.
 

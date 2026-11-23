@@ -91,12 +91,7 @@ Mensajes por hora y por sede, tiempo de respuesta entre sedes, latencia de entre
 
 ### Otras materias
 
-Estos archivos son de Tecnologías de Comunicación en Red y no forman parte de las entregas de POO.
-
-| Contenido | Ubicación |
-| --- | --- |
-| Planificación de la red (Fase 1) | [Phase1_Network_Planning_Report_Enterprise_Chat.pdf](docs/Phase1_Network_Planning_Report_Enterprise_Chat.pdf) |
-| Prototipo de la semana 9 | [Week9_Prototype_Report.pdf](docs/Week9_Prototype_Report.pdf), [network/week9/](network/week9/) y [evidence/week9/](evidence/week9/) |
+Esta rama contiene solo las entregas de POO de Luis. Los archivos de Tecnologías de Comunicación en Red (Alex) están en la rama `main` y los de Fundamentos de Seguridad (Arthur) en la rama `beltranfuego`.
 
 ## Tablero de tareas
 
